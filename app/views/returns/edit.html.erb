@@ -1,0 +1,70 @@
+<!-- Nav Bar -->
+
+<div class="row">
+  <div class="large-12 columns">
+    <div class="nav-bar right">
+      <ul class="button-group">
+      </ul>
+    </div>
+    <h1>File.me </h1>
+    <hr />
+  </div>
+</div>
+
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+
+<div class="row">
+
+  <!-- Main Blog Content -->
+  <div class="large-9 columns" role="content">
+
+    <article>
+      <%= form_for @return do |f| %>
+        <%= f.label 'What is your skill level?' %>
+        <%= f.select :filer_experience, ['Slim to none', 'Some experience', 'Very experienced', "I really don't need help"]  %>
+
+        <%= f.label 'What state do you live in?' %>
+        <%= f.text_field :filer_state %>
+
+        <%= f.label 'Email address?' %>
+        <%= f.text_field :filer_email %>
+
+        <%= f.label 'Select all of the following that apply to you:' %>
+        
+
+        <%= f.submit 'Submit' %>
+
+      <% end %>
+
+    </article>
+
+  </div>
+
+</div>
+
+<!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+
+<footer class="row">
+  <div class="large-12 columns">
+    <hr />
+    <div class="row">
+      <div class="large-6 columns">
+        <p>© Copyright no one at all. Go to town.</p>
+      </div>
+      <div class="large-6 columns">
+        <ul class="inline-list right">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
