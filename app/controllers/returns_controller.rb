@@ -15,7 +15,6 @@ class ReturnsController < ApplicationController
 
   def edit
     @return = Return.find(params[:id])
-    @return_question = ReturnQuestion.new
   end
 
   private
