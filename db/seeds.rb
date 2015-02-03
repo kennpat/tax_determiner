@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Question.delete_all
+
+Question.create([{question: 'I got married last year', score_value: 10}, {question: 'I worked in multiple states',
+  score_value: 30}, {question: 'I got a notice from the IRS during the year', score_value: 30}])

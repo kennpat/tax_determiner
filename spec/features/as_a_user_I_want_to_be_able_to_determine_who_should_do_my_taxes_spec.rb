@@ -19,7 +19,7 @@ feature 'Determine who should do my taxes', %{
     check 'I got married'
     check 'I worked in multiple states'
     check 'I got a notice from the IRS during the year'
-    click_on 'Determine what level of service I need'
+    click_on 'Submit'
 
     expect(page).to have_content 'You should probably see a CPA'
     end

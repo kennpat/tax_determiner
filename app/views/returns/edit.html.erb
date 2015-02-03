@@ -22,7 +22,7 @@
   <div class="large-9 columns" role="content">
 
     <article>
-      <%= form_for @return do |f| %>
+      <%= form_for [@return] do |f| %>
         <%= f.label 'What is your skill level?' %>
         <%= f.select :filer_experience, ['Slim to none', 'Some experience', 'Very experienced', "I really don't need help"]  %>
 
@@ -32,8 +32,8 @@
         <%= f.label 'Email address?' %>
         <%= f.text_field :filer_email %>
 
-        <%= f.label 'Select all of the following that apply to you:' %>
-        
+        <%= f.label :question_id, 'Select all of the following that apply to you:' %>
+        <%= f.collection_check_boxes( :question_id, Question.all, :id, :question) %>
 
         <%= f.submit 'Submit' %>
 

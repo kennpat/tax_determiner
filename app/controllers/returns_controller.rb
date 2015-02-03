@@ -14,8 +14,8 @@ class ReturnsController < ApplicationController
   end
 
   def edit
-    binding.pry
     @return = Return.find(params[:id])
+    @return_question = ReturnQuestion.new
   end
 
   private
