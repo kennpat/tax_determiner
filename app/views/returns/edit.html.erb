@@ -24,7 +24,7 @@
     <article>
       <%= form_for @return do |f| %>
         <%= f.label 'What is your skill level?' %>
-        <%= f.select :filer_experience, ['Slim to none', 'Some experience', 'Very experienced', "I really don't need help"]  %>
+        <%= f.select :filer_experience, ['Slim to none', 'Some experience', 'Very experienced']  %>
 
         <%= f.label 'What state do you live in?' %>
         <%= f.text_field :filer_state %>
