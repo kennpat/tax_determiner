@@ -4,9 +4,9 @@ class ReturnsController < ApplicationController
     @return = Return.find(params['id'])
 
     if @return.filer_experience == 'Slim to none'
-      @score = -20
+      @score = 20
     elsif @return.filer_experience == 'Some experience'
-      @score = -10
+      @score = 10
     else
       @score = 0
     end
@@ -15,9 +15,9 @@ class ReturnsController < ApplicationController
       @score = @score + question.score_value
     end
 
-    if @score <= 20
+    if @score < 20
       @service_determination = 'You can probably handle this yourself'
-    elsif @score <50
+    elsif @score < 50
       @service_determination = 'You probably need some help with your return'
     else
       @service_determination = 'You should probably see a CPA'
@@ -46,6 +46,7 @@ class ReturnsController < ApplicationController
   def update
     @return = Return.find(params[:id])
     @return_questions = params['return']['question_ids']
+
     if @return.update(return_params)
       @return_questions.each do |return_question|
         if return_question != ''
