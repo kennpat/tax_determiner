@@ -16,7 +16,7 @@ feature 'Determine who should do my taxes', %{
     expect(page).to have_content 'What is your skill level?'
     select 'Slim to none'
     select 'Massachusetts'
-    fill_in 'return_filer_email', with: 'test123@gmail.com'
+    fill_in 'return_filer_email', with: 'test123@test.com'
     expect(page).to have_content 'Select all of the following that apply to you:'
     check 'I got married'
     check 'I worked in multiple states'

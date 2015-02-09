@@ -6,6 +6,5 @@ class Return < ActiveRecord::Base
   validates :difficulty_score, presence: true, on: :update
   validates :filer_experience, presence: true, on: :update
   # not working at this time
-  validates_format_of :filer_email, with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i, on: :update
-
+  validates_format_of :filer_email, with: /@/, on: :update
 end

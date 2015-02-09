@@ -45,8 +45,7 @@ class ReturnsController < ApplicationController
 
   def update
     @return = Return.find(params[:id])
-    @return_questions = params['return']['question_ids']
-
+    @return_questions = params[:return]['question_ids']
     if @return.update(return_params)
       @return_questions.each do |return_question|
         if return_question != ''
@@ -64,6 +63,6 @@ class ReturnsController < ApplicationController
   private
 
   def return_params
-    params.require(:return).permit(:id, :return_type, :difficulty_score, :return_details)
+    params.require(:return).permit(:id, :filer_email, :filer_state, :return_type)
   end
 end
