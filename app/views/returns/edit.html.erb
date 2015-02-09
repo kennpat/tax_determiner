@@ -21,6 +21,12 @@
   <!-- Main Blog Content -->
   <div class="large-9 columns" role="content">
 
+    <% if @return.errors.any? %>
+      <% @return.errors.full_messages.each do |msg| %>
+        <%= msg %>
+      <% end %>
+    <% end %>
+
     <article>
       <%= form_for @return do |f| %>
         <%= f.label 'What is your skill level?' %>
@@ -29,7 +35,7 @@
         <%= f.label 'What state do you live in?' %>
         <%= f.select :filer_state, options_for_select(us_states) %>
 
-        <%= f.label 'Email address?' %>
+        <%= f.label :filer_email, 'Email address?' %>
         <%= f.text_field :filer_email %>
 
         <%= f.label 'Select all of the following that apply to you:' %>

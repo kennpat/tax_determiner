@@ -16,6 +16,7 @@ feature 'Determine who should do my taxes', %{
     expect(page).to have_content 'What is your skill level?'
     select 'Slim to none'
     select 'Massachusetts'
+    fill_in 'return_filer_email', with: 'test123@gmail.com'
     expect(page).to have_content 'Select all of the following that apply to you:'
     check 'I got married'
     check 'I worked in multiple states'
@@ -23,5 +24,15 @@ feature 'Determine who should do my taxes', %{
     click_on 'Submit'
 
     expect(page).to have_content 'You should probably see a CPA'
-    end
+  end
+
+  scenario 'A user gets forgets to add their email address and other important data' do
+    visit root_path
+    click_on 'Get Started'
+    select 'Individual'
+    click_on 'Submit'
+    click_on 'Submit'
+
+    expect(page).to have_content 'Filer email is invalid'
+  end
 end
