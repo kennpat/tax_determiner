@@ -15,6 +15,7 @@ feature 'Determine who should do my taxes', %{
     click_on 'Submit'
     expect(page).to have_content 'What is your skill level?'
     select 'Slim to none'
+    select 'Massachusetts'
     expect(page).to have_content 'Select all of the following that apply to you:'
     check 'I got married'
     check 'I worked in multiple states'

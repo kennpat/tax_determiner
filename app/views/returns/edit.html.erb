@@ -27,7 +27,7 @@
         <%= f.select :filer_experience, ['Slim to none', 'Some experience', 'Very experienced']  %>
 
         <%= f.label 'What state do you live in?' %>
-        <%= f.text_field :filer_state %>
+        <%= f.select :filer_state, options_for_select(us_states) %>
 
         <%= f.label 'Email address?' %>
         <%= f.text_field :filer_email %>
