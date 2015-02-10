@@ -4,9 +4,9 @@ class ReturnsController < ApplicationController
     @return = Return.find(params['id'])
     #I think I can move most of this logic into the model, to move to a skinny controller fat model style
     if @return.filer_experience == 'Slim to none'
-      @score = 20
-    elsif @return.filer_experience == 'Some experience'
       @score = 10
+    elsif @return.filer_experience == 'Some experience'
+      @score = 5
     else
       @score = 0
     end
