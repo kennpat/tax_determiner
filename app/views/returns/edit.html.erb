@@ -6,7 +6,7 @@
       <ul class="button-group">
       </ul>
     </div>
-    <h1>File.me </h1>
+    <h1><%= link_to 'file.me', root_path %></h1>
     <hr />
   </div>
 </div>
@@ -20,13 +20,13 @@
 
   <!-- Main Blog Content -->
   <div class="large-9 columns" role="content">
-
-    <% if @return.errors.any? %>
-      <% @return.errors.full_messages.each do |msg| %>
-        <%= msg %>
+    <div class="error">
+      <% if @return.errors.any? %>
+        <% @return.errors.full_messages.each do |msg| %>
+          <%= msg %>
+          <% end %>
       <% end %>
-    <% end %>
-
+    </div>
     <article>
       <%= form_for @return do |f| %>
         <%= f.label 'What is your skill level?' %>
@@ -61,7 +61,7 @@
     <hr />
     <div class="row">
       <div class="large-6 columns">
-        <p>© Copyright File.me 2015.</p>
+        <p>© 2015 file.me.</p>
       </div>
       <div class="large-6 columns">
         <ul class="inline-list right">

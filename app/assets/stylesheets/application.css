@@ -30,3 +30,7 @@
    display: list-item;
    vertical-align: -5px;
  }
+
+ .error {
+  color: red;
+}
