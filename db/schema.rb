@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150203022750) do
+ActiveRecord::Schema.define(version: 20150211204758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,10 +29,10 @@ ActiveRecord::Schema.define(version: 20150203022750) do
   end
 
   create_table "returns", force: :cascade do |t|
-    t.string   "return_type",                               null: false
-    t.integer  "difficulty_score", default: 0,              null: false
-    t.string   "return_details",                                         array: true
-    t.string   "filer_experience", default: "Slim to none", null: false
+    t.string   "return_type",                  null: false
+    t.integer  "difficulty_score", default: 0, null: false
+    t.string   "return_details",                            array: true
+    t.string   "filer_experience"
     t.string   "filer_email"
     t.string   "filer_state"
     t.datetime "created_at"

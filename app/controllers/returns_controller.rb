@@ -2,6 +2,7 @@ class ReturnsController < ApplicationController
 
   def show
     @return = Return.find(params['id'])
+    binding.pry
     #I think I can move most of this logic into the model, to move to a skinny controller fat model style
     @score = 0
     if @return.filer_experience == 'Slim to none'

@@ -30,10 +30,10 @@
     <article>
       <%= form_for @return do |f| %>
         <%= f.label 'What is your skill level?' %>
-        <%= f.select :filer_experience, ['Slim to none', 'Some experience', 'Very experienced']  %>
+        <%= f.select :filer_experience, ['Slim to none', 'Some experience', 'Very experienced'], include_blank: 'Please select one' %>
 
         <%= f.label 'What state do you live in?' %>
-        <%= f.select :filer_state, options_for_select(us_states) %>
+        <%= f.select :filer_state, options_for_select(us_states), include_blank: 'Please select one' %>
 
         <%= f.label :filer_email, 'What is your email address?' %>
         <%= f.text_field :filer_email %>
@@ -61,7 +61,7 @@
     <hr />
     <div class="row">
       <div class="large-6 columns">
-        <p>© 2015 file.me.</p>
+        <p>© 2015 file.me</p>
       </div>
       <div class="large-6 columns">
         <ul class="inline-list right">

@@ -38,36 +38,24 @@
       <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
 
       <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-
+      <div class="panel">
+        <h5>Type of return I need help with:</h5>
+        <%= form_for @return do |f| %>
+        <%= f.select :return_type, ['Individual','Trust','Estate', 'Partnership', 'Corporate'] %>
+        <%=f.submit 'Submit' %>
+        <% end %>
+      </div>
     </article>
 
     <hr />
-
 
   </div>
 
   <!-- End Main Content -->
 
-
-  <!-- Sidebar -->
-
-  <aside class="large-3 columns">
-
-    <div class="panel">
-      <h5>Type of return I need help with:</h5>
-      <%= form_for @return do |f| %>
-        <%= f.select :return_type, ['Individual','Trust','Estate', 'Partnership', 'Corporate'] %>
-        <%=f.submit 'Submit' %>
-      <% end %>
-    </div>
-
-  </aside>
-
-  <!-- End Sidebar -->
 </div>
 
 <!-- End Main Content and Sidebar -->
-
 
 <!-- Footer -->
 
@@ -76,12 +64,12 @@
     <hr />
     <div class="row">
       <div class="large-6 columns">
-        <p>© 2015 file.me.</p>
+        <p>© 2015 file.me</p>
       </div>
       <div class="large-6 columns">
         <ul class="inline-list right">
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
           <li><a href="#">Link 3</a></li>
           <li><a href="#">Link 4</a></li>
         </ul>
