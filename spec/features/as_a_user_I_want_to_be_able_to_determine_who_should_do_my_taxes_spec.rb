@@ -18,7 +18,7 @@ feature 'Determine who should do my taxes', %{
     select 'Massachusetts'
     fill_in 'return_filer_email', with: 'test123@test.com'
     expect(page).to have_content 'Select all of the following that apply to you:'
-    check 'I got married'
+    check 'I got married last year'
     check 'I worked in multiple states'
     check 'I got a notice from the IRS during the year'
     click_on 'Submit'

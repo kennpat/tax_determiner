@@ -4,7 +4,7 @@ feature 'As a user when I first come to the site I want to see a landing page' d
 
   scenario 'A landing page is visited for the first time' do
     visit root_path
-    expect(page).to have_content 'File.me'
+    expect(page).to have_content 'file.me'
   end
 
 end
