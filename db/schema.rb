@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150211204758) do
+ActiveRecord::Schema.define(version: 20150217195159) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20150211204758) do
     t.integer "question_id"
     t.integer "return_id"
   end
+
+  add_index "return_questions", ["return_id", "question_id"], name: "index_return_questions_on_return_id_and_question_id", unique: true, using: :btree
 
   create_table "returns", force: :cascade do |t|
     t.string   "return_type",                  null: false
