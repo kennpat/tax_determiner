@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get 'about', to: 'welcome#about'
   get 'blog', to: 'welcome#blog'
   resources :returns
+  resources :contact_forms, only: [:create, :new]
 
 end
