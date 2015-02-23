@@ -13,10 +13,10 @@ feature 'as a user i want to be able to contact file.me', %{
     fill_in 'Email', with: 'test@test.com'
     fill_in 'Message', with: 'This is an awesome website!'
     click_on 'Send Message'
-    expect(page).to have_content 'Message sent!'
-
-    last_email.to.should have_content 'admin@file.me'
-    last_email.from.should have_content 'test@test.com'
+    expect(ActionMailer::Base.deliveries.size).to eql(1)
+    last_email = ActionMailer::Base.deliveries.last
+    expect(last_email).to have_content 'file.me@dnstartups.com'
+    expect(last_email).to have_content 'test@test.com'
   end
 
 end

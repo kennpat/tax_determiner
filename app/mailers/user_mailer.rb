@@ -1,6 +1,8 @@
 class UserMailer < ApplicationMailer
-  def contact_form_emal(info)
-    @info = info
-    mail(to: 'dnstartups@gmail.com', subject: 'file.me contact form submission')
+  default from: 'form@file.me'
+  def contact_mailer(contact_form_detail)
+    @contact_form_detail = contact_form_detail
+    binding.pry
+    mail to: 'file.me@dnstartups.com', subject: 'File.me contact form submission'
   end
 end

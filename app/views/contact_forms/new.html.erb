@@ -10,12 +10,14 @@
       <section class="section">
         <div class="content" data-slug="panel1">
           <form>
+            <%= form_for @contact_form do |f| %>
             <div class="row collapse">
               <div class="large-2 columns">
                 <label class="inline">Your Name</label>
               </div>
               <div class="large-10 columns">
-                <input type="text" id="Name" placeholder="Jane Smith">
+                <%= f.label :name %>
+                <%= f.text_field :name, value: 'John Smith' %>
               </div>
             </div>
             <div class="row collapse">
@@ -23,12 +25,15 @@
                 <label class="inline">Your Email</label>
               </div>
               <div class="large-10 columns">
-                <input type="text" id="Email" placeholder="jane@smithco.com">
+                <%= f.label :email %>
+                <%= f.text_field :email, value: 'johnsmith@gmail.com' %>
               </div>
             </div>
             <label>What's up?</label>
-            <textarea rows="4" id='Message'></textarea>
-            <button type="submit" class="radius button">Send Message</button>
+              <%= f.label :message %>
+              <%= f.text_area :message %>
+              <%= f.submit 'Send Message' %>
+            <% end %>
           </form>
         </div>
       </section>
@@ -42,12 +47,6 @@
     <div class="row">
       <div class="large-6 columns">
         <p>© file.me 2015</p>
-      </div>
-      <div class="large-6 columns">
-        <ul class="inline-list right">
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
       </div>
     </div>
   </div>
