@@ -8,6 +8,11 @@
     <p>We'd love to hear from you. You can either reach out to us as a whole and one of our awesome team members will get back to you, or if you have a specific question reach out to one of our staff. We love getting email all day <em>all day</em>.</p>
     <div class="section-container tabs" data-section>
       <section class="section">
+        <% if @return.errors.any? %>
+          <% @return.errors.full_messages.each do |msg| %>
+            <%= msg %>
+            <% end %>
+        <% end %>
         <div class="content" data-slug="panel1">
           <form>
             <%= form_for @contact_form do |f| %>
@@ -17,7 +22,7 @@
               </div>
               <div class="large-10 columns">
                 <%= f.label :name %>
-                <%= f.text_field :name, value: 'John Smith' %>
+                <%= f.text_field :name %>
               </div>
             </div>
             <div class="row collapse">
@@ -26,7 +31,7 @@
               </div>
               <div class="large-10 columns">
                 <%= f.label :email %>
-                <%= f.text_field :email, value: 'johnsmith@gmail.com' %>
+                <%= f.text_field :email %>
               </div>
             </div>
             <label>What's up?</label>
