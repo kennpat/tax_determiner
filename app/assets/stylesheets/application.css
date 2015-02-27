@@ -16,21 +16,25 @@
 
  */
 
- .checkbox_container {
-   display: list-item;
-   vertical-align: -1px;
-   margin: 5px;
- }
+.checkbox_container {
+  display: list-item;
+  vertical-align: -1px;
+  margin: 5px;
+}
 
- .checkbox_container input {
-   display: list-item;
- }
+.checkbox_container input {
+  display: list-item;
+}
 
- .checkbox_container .collection_check_boxes{
-   display: list-item;
-   vertical-align: -5px;
- }
+.checkbox_container .collection_check_boxes{
+  display: list-item;
+  vertical-align: -5px;
+}
 
- .error {
+.error {
   color: red;
+}
+
+.secondary.button {
+  backgound-color: #FA9933;
 }
