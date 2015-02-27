@@ -23,8 +23,8 @@ class Return < ActiveRecord::Base
     else
       @score += 85
     end
-    # without the below return statement the method returns an array. Should address in the future.
-    return @score
+    # without the below return statement the method returns an array of questions. Should address in the future.
+    @score
   end
 
   def self.service_determination(score)
