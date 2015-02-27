@@ -28,16 +28,7 @@ class ReturnsController < ApplicationController
     @return = Return.find(params[:id])
     @return_questions = params[:return]['question_ids']
     if @return.update(return_params)
-      if @return_questions != nil
-        @return_questions.each do |return_question|
-          # should be able to move this to the model
-          if return_question != ''
-            question = Question.find(return_question.to_i)
-            assigned_question = ReturnQuestion.new(question_id: question.id, return_id: @return.id)
-            assigned_question.save
-          end
-        end
-      end
+      Return.return_question_adder(@return_questions, @return)
       redirect_to return_path(@return), notice: 'return updated successfully'
     else
       render :edit

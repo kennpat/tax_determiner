@@ -37,4 +37,16 @@ class Return < ActiveRecord::Base
     end
   end
 
+  def self.return_question_adder(return_questions, return_requested)
+    if return_questions != nil
+      return_questions.each do |return_question|
+        if return_question != ''
+          question = Question.find(return_question.to_i)
+          assigned_question = ReturnQuestion.new(question_id: question.id, return_id: return_requested.id)
+          assigned_question.save
+        end
+      end
+    end
+  end
+
 end
