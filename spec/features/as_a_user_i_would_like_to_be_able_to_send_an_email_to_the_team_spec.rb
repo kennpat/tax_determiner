@@ -24,7 +24,7 @@ feature 'as a user i want to be able to contact file.me', %{
     click_on 'Send Message'
     expect(page).to have_content "Name can't be blank"
     expect(page).to have_content "Email can't be blank"
-    expect(page).to have_content 'Email is invalid'
+    expect(page).to have_content 'Email is invalidr'
     expect(page).to have_content "Message can't be blank"
   end
 
