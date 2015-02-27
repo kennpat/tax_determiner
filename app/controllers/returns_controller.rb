@@ -2,33 +2,8 @@ class ReturnsController < ApplicationController
 
   def show
     @return = Return.find(params['id'])
-    #I think I can move most of this logic into the model, to move to a skinny controller fat model style
-    @score = 0
-    if @return.filer_experience == 'Slim to none'
-      @score = 10
-    elsif @return.filer_experience == 'Some experience'
-      @score = 5
-    else
-      @score = 0
-    end
-
-    # if the score determination logic is moved to the model this will need to be refactored
-    if @return.return_type == 'Individual'
-      @return.questions.each do |question|
-        @score = @score + question.score_value
-      end
-    else
-      @score += 100
-    end
-    # if the score determination logic is moved this will need to be refactored and also moved into the model
-    if @score < 20
-      @service_determination = 'You can probably handle this yourself'
-    elsif @score < 50
-      @service_determination = 'You probably need some help with your return'
-    else
-      @service_determination = 'You should probably see a CPA'
-    end
-
+    @score = Return.score_determination(@return)
+    @service_determination = Return.service_determination(@score)
   end
 
   def new
