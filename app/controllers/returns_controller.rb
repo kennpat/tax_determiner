@@ -13,10 +13,14 @@ class ReturnsController < ApplicationController
     end
 
     # if the score determination logic is moved to the model this will need to be refactored
-    @return.questions.each do |question|
-      @score = @score + question.score_value
+    if @return.return_type == 'Individual'
+      @return.questions.each do |question|
+        @score = @score + question.score_value
+      end
+    else
+      @score += 100
     end
-    # if the score determination logic is moved this will need to be refactored
+    # if the score determination logic is moved this will need to be refactored and also moved into the model
     if @score < 20
       @service_determination = 'You can probably handle this yourself'
     elsif @score < 50
@@ -49,11 +53,14 @@ class ReturnsController < ApplicationController
     @return = Return.find(params[:id])
     @return_questions = params[:return]['question_ids']
     if @return.update(return_params)
-      @return_questions.each do |return_question|
-        if return_question != ''
-          question = Question.find(return_question.to_i)
-          assigned_question = ReturnQuestion.new(question_id: question.id, return_id: @return.id)
-          assigned_question.save
+      if @return_questions != nil
+        @return_questions.each do |return_question|
+          # should be able to move this to the model
+          if return_question != ''
+            question = Question.find(return_question.to_i)
+            assigned_question = ReturnQuestion.new(question_id: question.id, return_id: @return.id)
+            assigned_question.save
+          end
         end
       end
       redirect_to return_path(@return), notice: 'return updated successfully'

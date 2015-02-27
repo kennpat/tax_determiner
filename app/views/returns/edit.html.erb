@@ -38,10 +38,10 @@
 
         <%= f.label :filer_email, 'What is your email address?' %>
         <%= f.text_field :filer_email %>
-
-        <%= f.label 'Select all of the following that apply to you:' %>
-        <%= f.collection_check_boxes(:question_ids, Question.all, :id, :question) %>
-
+        <% if @return.return_type == 'Individual' %>
+          <%= f.label 'Select all of the following that apply to you:' %>
+          <%= f.collection_check_boxes(:question_ids, Question.all, :id, :question) %>
+        <% end %>
         <%= f.submit 'Submit' %>
 
       <% end %>
