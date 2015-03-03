@@ -23,7 +23,6 @@
     <article>
 
       <h3><a href="#"><%= @service_determination %></a></h3>
-      <h3>Your score is: <%= @score %> </h3>
         <% if @service_determination == 'You can probably handle this yourself' %>
           <div class="row">
             <div class="large-6 columns">
@@ -31,7 +30,7 @@
               <p>We’ve provided the links to a few service providers below that will match up best with what you’ve entered. Remember you can always move up if you want!</p>
             </div>
             <div class="large-6 columns">
-              <img src="http://placehold.it/400x240&text=[img]"/>
+              <a href="https://turbotax.intuit.com/"><img src="http://intuitturbotax.files.wordpress.com/2011/11/tt-white-logo.gif"/></a>
             </div>
           </div>
         <% elsif @service_determination == 'You probably need some help with your return' %>
@@ -41,7 +40,7 @@
               <p>We’ve provided the links to a few service providers below that will match up best with what you’ve entered. Remember you can always move up if you want!</p>
             </div>
             <div class="large-6 columns">
-              <img src="http://placehold.it/400x240&text=[img]"/>
+              <a href="http://www.hrblock.com/"><img src="http://newsroom.hrblock.com/wp-content/uploads/2013/11/HRB_block-376C.jpg"/></a>
             </div>
           </div>
         <% else %>
@@ -51,7 +50,7 @@
               <p>We’ve provided the links to a few CPA firms below that provide a variety of services. Remember that each firm is different and that some provide services beyond tax return preparation.</p>
             </div>
             <div class="large-6 columns">
-              <img src="http://placehold.it/400x240&text=[img]"/>
+              <a href="http://www.aicpa.org/"><img src="/logo/AICPA-logo.jpg"/></a>
             </div>
           </div>
         <% end %>

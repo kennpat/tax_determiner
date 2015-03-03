@@ -5,16 +5,15 @@
       <h1><%= link_to image_tag('/logo/logo.jpg'), root_path %></h1>
     </div>
     <h3>Get in Touch!</h3>
-    <p>We'd love to hear from you. Please shoot us a message about anything in regards to the site.</p>
+    <p>We'd love to hear from you. Please shoot us a message about anything in regards to the site.</p></br>
+    <% if @contact_form.errors.any? %>
+      <% @contact_form.errors.full_messages.each do |msg| %>
+        <%= msg %>
+      <% end %>
+    <% end %>
     <div class="section-container tabs" data-section>
       <section class="section">
-        <% if @contact_form.errors.any? %>
-          <% @contact_form.errors.full_messages.each do |msg| %>
-            <%= msg %>
-          <% end %>
-        <% end %>
         <div class="content" data-slug="panel1">
-
           <%= form_for @contact_form do |f| %>
             <div class="row collapse">
               <div class="large-2 columns">
@@ -36,7 +35,6 @@
             <%= f.text_area :message, rows: 10 %>
             <%= f.submit 'Send Message' %>
           <% end %>
-          </form>
         </div>
       </section>
     </div>
