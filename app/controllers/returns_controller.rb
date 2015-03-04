@@ -22,6 +22,7 @@ class ReturnsController < ApplicationController
 
   def edit
     @return = Return.find(params[:id])
+    @questions = Question.all
   end
 
   def update
@@ -31,6 +32,7 @@ class ReturnsController < ApplicationController
       Return.return_question_adder(@return_questions, @return)
       redirect_to return_path(@return), notice: 'return updated successfully'
     else
+      @questions = Question.all
       render :edit
     end
   end

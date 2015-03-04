@@ -40,10 +40,13 @@
         <%= f.text_field :filer_email %>
 
         <% if @return.return_type == 'Individual' %>
-          <%= f.label 'Select all of the following that apply to you:' %>
-          <%= f.collection_check_boxes(:question_ids, Question.all, :id, :question) %>
+          <p>Select all of the following that apply to you:</p>
+          <%= hidden_field_tag 'return[question_ids][]', nil %>
+          <% @questions.all.each do |question| %>
+            <%= check_box_tag 'return[question_ids][]', question.id, @return.question_ids.include?(question.id), id: dom_id(question) %>
+            <%= label_tag dom_id(question), question.question %></br>
+          <% end %>
         <% end %>
-
         <%= f.submit 'Submit' %>
 
       <% end %>

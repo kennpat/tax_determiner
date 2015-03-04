@@ -39,6 +39,8 @@ class Return < ActiveRecord::Base
 
   def self.return_question_adder(return_questions, return_requested)
     if return_questions != nil
+      # reset the return_questions associated with the return.
+      ReturnQuestion.where(return_id: return_requested.id).delete_all
       return_questions.each do |return_question|
         if return_question != ''
           question = Question.find(return_question.to_i)
@@ -46,6 +48,9 @@ class Return < ActiveRecord::Base
           assigned_question.save
         end
       end
+    else
+      # If the return_questions checkboxes come back empty then this will remove all associated return_questions
+      ReturnQuestion.where(return_id: return_requested.id).delete_all
     end
   end
 
