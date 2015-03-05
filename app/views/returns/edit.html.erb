@@ -24,7 +24,7 @@
     <div class="error">
       <% if @return.errors.any? %>
         <% @return.errors.full_messages.each do |msg| %>
-          <%= msg %>
+          <span><%= msg %>. </span>
           <% end %>
       <% end %>
     </div>

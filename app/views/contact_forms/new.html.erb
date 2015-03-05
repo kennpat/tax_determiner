@@ -8,8 +8,8 @@
     <p>We'd love to hear from you. Please shoot us a message about anything in regards to the site.</p></br>
     <div class="error">
       <% if @contact_form.errors.any? %>
-        <p><% @contact_form.errors.full_messages.each do |msg| %>. </p>
-          <%= msg %>
+        <% @contact_form.errors.full_messages.each do |msg| %>
+          <span><%= msg %>. </span>
         <% end %>
       <% end %>
     </div>
