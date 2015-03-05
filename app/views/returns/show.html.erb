@@ -53,9 +53,11 @@
               <a href="http://www.aicpa.org/"><img src="/logo/AICPA-logo.jpg"/></a>
             </div>
           </div>
-        <% end %>
-        <p>Do you think that you may have incorrectly selected something? Click here to edit your selections:<p>
-        <%= link_to 'Edit My Info', edit_return_path(@return.id), class: 'secondary button' %>
+        <% end %></br>
+        <div>
+          <p>Do you think that you may have incorrectly selected something? Click here to edit your selections:<p>
+          <%= link_to 'Edit My Info', edit_return_path(@return.id), class: 'secondary button' %>
+        </div>
     </article>
 
     <hr/>
