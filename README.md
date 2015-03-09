@@ -8,6 +8,10 @@ the determination.
 I developed the scores and the the effect of the user's experience from my own experience as a licensed CPA, and from
 other CPAs I know in the profession.
 
+[ADD EXPLANATIONS OF THE INTEREST THINGS YOU LEARNED DURING YOUR WORK ON THIS PROJECT]
+
+[ADD SCREENSHOTS HERE OF HOW THE APP IS USED HERE]
+
 Basic setup of the app for your localhost server:
 
 1. Clone from github.
@@ -18,8 +22,6 @@ Basic setup of the app for your localhost server:
 5. Run rake to ensure that tests are passing.
 
 You should be all set for localhost running at this point.
-
-[ADD SCREENSHOTS HERE OF HOW THE APP IS USED HERE]
 
 Future build outs:
 
