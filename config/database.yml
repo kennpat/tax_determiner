@@ -58,7 +58,7 @@ development:
 test:
   <<: *default
   host:     localhost
-  database: tax-determiner_test
+  database: tax_determiner_test
   pool:     5
   username:
   password:
