@@ -8,3 +8,5 @@
 
 # ignore passed in environmental variable values. See .env.example file for variables you need to add.
 /.env
+# ignored to stop git upload bloat
+/coverage
