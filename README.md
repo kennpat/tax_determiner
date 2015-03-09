@@ -22,6 +22,7 @@ You should be all set for localhost running at this point.
 [ADD SCREENSHOTS HERE OF HOW THE APP IS USED HERE]
 
 Future build outs:
+
 1. Lead generation additions for Turbo Tax, H&R Block, and CPA firms.
 
 2. My intention is to build this app out for the other types of returns. As they can be much more complicated
