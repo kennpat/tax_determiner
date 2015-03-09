@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/kennpat/tax-determiner.svg?branch=master)](https://travis-ci.org/kennpat/tax-determiner) [![Code Climate](https://codeclimate.com/github/kennpat/tax-determiner.png)](https://codeclimate.com/github/kennpat/tax-determiner) [![Coverage Status](https://coveralls.io/repos/kennpat/tax-determiner/badge.png)](https://coveralls.io/r/kennpat/tax-determiner)
+[![Build Status](https://travis-ci.org/kennpat/tax_determiner.svg?branch=master)](https://travis-ci.org/kennpat/tax_determiner) [![Code Climate](https://codeclimate.com/github/kennpat/tax_determiner.png)](https://codeclimate.com/github/kennpat/tax_determiner) [![Coverage Status](https://coveralls.io/repos/kennpat/tax_determiner/badge.png)](https://coveralls.io/r/kennpat/tax_determiner)
 
-tax-determiner is an app that will help users determine the level of tax service that they might want to consider.
+tax_determiner is an app that will help users determine the level of tax service that they might want to consider.
 
 It takes into consideration the user's experience level and events that have taken place during the year to make
 the determination.
