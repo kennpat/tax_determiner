@@ -18,7 +18,6 @@ group :production do
 end
 
 group :development, :test do
-  gem 'coveralls', require: false
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
@@ -29,4 +28,8 @@ group :development, :test do
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
   gem 'pry'
+end
+
+group :test do
+  gem 'coveralls', require: false
 end
