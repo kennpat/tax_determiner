@@ -1,4 +1,4 @@
-== README
+[ADD BADGES HERE]
 
 tax-determiner is an app that will help users determine the level of tax service that they might want to consider.
 
@@ -11,24 +11,15 @@ other CPAs I know in the profession.
 Basic setup of the app for your localhost server:
 
 1. Clone from github.
+2. The Gemfile requires Ruby 2.0.0 so ensure that you are running on that version of Ruby.
 2. Bundle the gems, just in case you don't have something.
-3. Create the db, migrate, and seed the test database.
-4. Add in your account info for your mailer (Sendgrid/Mandrill/etc).
-5. Run rake. All the tests should pass.
+3. Run `rake db:create`, `rake db:migrate` and `rake db:seed` to create, migrate and seed the database.
+4. Add in your account info for your mailer (Sendgrid/Mandrill/etc) to your .env file.
+5. Run rake to ensure that tests are passing.
 
 You should be all set for localhost running at this point.
 
-For pushing up to Heroku:
-
-Create the app on Heroku and run the setup within the app folder on your local folder the do the following:
-
-1. You'll need to push the environment variables for mandrill (or sendgrid if you're using that)
-2. Add the applicable mailer app to Heroku.
-3. Change the domain to your applicable domain in the production.rb enviroment.
-4. Push the updated app to Heroku.
-5. Seed the production database
-
-After this you should be ready to roll with Heroku.
+[ADD SCREENSHOTS HERE OF HOW THE APP IS USED HERE]
 
 Future build outs:
 1. Lead generation additions for Turbo Tax, H&R Block, and CPA firms.
@@ -37,3 +28,5 @@ Future build outs:
 and can cause wildly different pricing for a return CPA firms will find this additional info helpful.
 
 3. I'd like to add a Q&A page for users to post questions that would be answered by a professional.
+
+[TURN YOUR ABOVE THREE IDEAS GITHUB ISSUES IN YOUR REPO.]
