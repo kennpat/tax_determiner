@@ -11,19 +11,14 @@ the determination.
 I developed the scores and the the effect of the user's experience from my own experience as a licensed CPA, and from
 other CPAs I know in the profession.
 
-Things That Probably Only I Found Interesting In This Project
+Things That Probably Only I Found Interesting In This Project [I WOULD CHANGE THIS TITLE TO SOMETHING MORE SERIOUS]
 -------------------------------------------------------------
 
-*Usage of Active Model to mimic Active Record for use in the contact page. Being able to create an object and get all
-of the benefits of Active Record (validations, etc) was pretty interesting.
+* Usage of Active Model to mimic Active Record for use in the contact page. Being able to create an object and get all of the benefits of Active Record (validations, etc) was pretty interesting. [WHY WAS IT INTERESTING? WHY DID YOU HAVE TO USE ACTIVE MODEL INSTEAD OF AR]
 
-*Realizing that because of how browsers cache previous pages that a user just using 'Back' would not result in what
-I had intended. I discovered that validations may not save you in this instance and set the app to force a page refresh
-when back was used.
+* Realizing that because of how browsers cache previous pages that a user [USER WHAT? MAYBE YOU MEAN VISITED HERE] just using 'Back' would not result in what I had intended [WHAT DID YOU INTEND?]. I discovered that validations may not save you in this instance and set the app to force a page refresh when back was used. [HOW DID YOU FORCE A REFRESH?]
 
-*Building a return object through more than just one page so that the form was more responsive, but finding that the
-approach opened a can of worms was enlightening. In the future I will probably utilize one of the gems that solves
-this iterative building of an object instead of going from new -> create -> edit to create the object.
+* Building a return object through more than just one page so that the form was more responsive, but finding that the approach opened a can of worms [CAN OF WORMS HOW?] was enlightening. In the future I will probably utilize one of the gems that solves this iterative building of an object [WHAT DOES 'ITERATIVE BUILDING OF AN OBJECT' MEAN?] instead of going from new -> create -> edit to create the object.
 
 The App in Action
 -----------------
