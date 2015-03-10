@@ -18,7 +18,7 @@ Things That Probably Only I Found Interesting In This Project [I WOULD CHANGE TH
 
 * Realizing that because of how browsers cache previous pages that a user [USER WHAT? MAYBE YOU MEAN VISITED HERE] just using 'Back' would not result in what I had intended [WHAT DID YOU INTEND?]. I discovered that validations may not save you in this instance and set the app to force a page refresh when back was used. [HOW DID YOU FORCE A REFRESH?]
 
-* Building a return object through more than just one page so that the form was more responsive, but finding that the approach opened a can of worms [CAN OF WORMS HOW?] was enlightening. In the future I will probably utilize one of the gems that solves this iterative building of an object [WHAT DOES 'ITERATIVE BUILDING OF AN OBJECT' MEAN?] instead of going from new -> create -> edit to create the object.
+* Building a return object through more than just one page so that the form was more responsive, but finding that the approach opened a can of worms [CAN OF WORMS HOW?] was enlightening. In the future I will probably utilize one of the gems that solves this iterative building of an object [WHAT DOES 'ITERATIVE BUILDING OF AN OBJECT' MEAN?] instead of going from new -> create -> edit to create the object. [THIS ENTIRE BULLET IS NOT CLEAR SO I WOULD REWRITE IT AFTER OUTLINING WHAT YOU MEAN EXACTLY]
 
 The App in Action
 -----------------
