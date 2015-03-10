@@ -28,20 +28,20 @@ this iterative building of an object instead of going from new -> create -> edit
 The App in Action
 -----------------
 
-![alt tag](https://raw.github.com/kennpat/tax-determiner/tree/master/public/Readme/homepage.png)
+![alt tag](https://raw.githubusercontent.com/kennpat/tax_determiner/master/public/Readme/homepage.png)
 
 After clicking 'Get Started' the app will ask you what type of return that you need help with
 
-![alt tag](https://raw.github.com/kennpat/tax-determiner/tree/master/public/Readme/newpage.png)
+![alt tag](https://raw.githubusercontent.com/kennpat/tax_determiner/master/public/Readme/newpage.png)
 
 Once you have selected the type of return you need help with the app will ask for basic information and questions
 related to your return. Note that at this time only the individual return type has a question list.
 
-![alt tag](https://raw.github.com/kennpat/tax-determiner/tree/master/public/Readme/editpage.png)
+![alt tag](https://raw.githubusercontent.com/kennpat/tax_determiner/master/public/Readme/editpage.png)
 
 The app will then calculate the difficulty of your potential return and generate what type of service you might require
 
-![alt tag](https://raw.github.com/kennpat/tax-determiner/tree/master/public/Readme/showpage.png)
+![alt tag](https://raw.githubusercontent.com/kennpat/tax_determiner/master/public/Readme/showpage.png)
 
 Basic setup of the app for your localhost server:
 -------------------------------------------------
