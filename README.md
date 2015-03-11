@@ -11,15 +11,15 @@ the determination.
 I developed the scores and the the effect of the user's experience from my own experience as a licensed CPA, and from
 other CPAs I know in the profession.
 
-Technical Challenges Encountered During Development  [I WOULD CHANGE THIS TITLE TO SOMETHING MORE SERIOUS]
+Technical Challenges Encountered During Development
 --------------------
 
 * Usage of Active Model to mimic Active Record for use in the contact page. Being able to create an object and get all of the benefits of Active Record (validations, etc) was pretty interesting.
-I decided to use Active Model instead of Active Record to try to keep my database as simple as possible, and avoid unnecessary database hits. [WHY WAS IT INTERESTING? WHY DID YOU HAVE TO USE ACTIVE MODEL INSTEAD OF AR]
+I decided to use Active Model instead of Active Record to try to keep my database as simple as possible, and avoid unnecessary database hits.
 
-* Realizing that because of how browsers cache previous pages that a user visited[USER WHAT? MAYBE YOU MEAN VISITED HERE] just using 'Back' would not result in what I had intended [WHAT DID YOU INTEND?]. My intention was that the user would utilize the app and when they had gotten to the show page, showing the level of service that they would be able to go back and edit their selection. If the user had hit the back button instead of the 'Edit' button the browser would use the cached version of the previous page and not render a new one. This would allow boxes that were unchecked to not be updated properly. I discovered that validations may not save you in this instance and set the app to force a page refresh when back was used. To solve this I added a method to the ApplicationController.rb file called 'set_cache_buster' which essentially forces the app to refresh by resetting the setting allowing the browser to cache. Additionally I added to the return model a method that would reset all the associated return_questions when edit is called. [HOW DID YOU FORCE A REFRESH?]
+* Realizing that because of how browsers cache previous pages that a user visited, just using 'Back' would not result in what I had intended. My intention was that the user would utilize the app and when they had gotten to the show page, showing the level of service that they would be able to go back and edit their selection. If the user had hit the back button instead of the 'Edit' button the browser would use the cached version of the previous page and not render a new one. This would allow boxes that were unchecked to not be updated properly. I discovered that validations may not save you in this instance and set the app to force a page refresh when back was used. To solve this I added a method to the ApplicationController.rb file called 'set_cache_buster' which essentially forces the app to refresh by resetting the setting allowing the browser to cache. Additionally I added to the return model a method that would reset all the associated return_questions when edit is called.
 
-* Implementing the fat model/skinny controller convention to the project. In my readings of the Rails 4 Way and other documentation I learned about the skinny controller convention. Initially I had too much logic in the return controller, and as a result the return controller had become difficult to read. Refactoring the logic in a way that it still worked as intended as a separate methods took some thinking, but in the end I learned that I should have planned to do this from the beginning of the app.
+* Implementing the fat model/skinny controller convention to the project. Initially I had too much logic in the return controller, and as a result, the return controller had become difficult to read. Refactoring the logic in a way that it still worked as intended as a separate methods took some thinking, but in the end I learned that I should have planned to do this from the beginning of the app.
 
 The App in Action
 -----------------
@@ -35,7 +35,7 @@ related to your return. Note that at this time only the individual return type h
 
 ![alt tag](https://raw.githubusercontent.com/kennpat/tax_determiner/master/public/Readme/editpage.png)
 
-The app will then calculate the difficulty of your potential return and generate what type of service you might require
+The app will then calculate the difficulty of your potential return and generate what type of service you might require.
 
 ![alt tag](https://raw.githubusercontent.com/kennpat/tax_determiner/master/public/Readme/showpage.png)
 
