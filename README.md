@@ -19,7 +19,7 @@ I decided to use Active Model instead of Active Record to try to keep my databas
 
 * Realizing that because of how browsers cache previous pages that a user visited[USER WHAT? MAYBE YOU MEAN VISITED HERE] just using 'Back' would not result in what I had intended [WHAT DID YOU INTEND?]. My intention was that the user would utilize the app and when they had gotten to the show page, showing the level of service that they would be able to go back and edit their selection. If the user had hit the back button instead of the 'Edit' button the browser would use the cached version of the previous page and not render a new one. This would allow boxes that were unchecked to not be updated properly. I discovered that validations may not save you in this instance and set the app to force a page refresh when back was used. To solve this I added a method to the ApplicationController.rb file called 'set_cache_buster' which essentially forces the app to refresh by resetting the setting allowing the browser to cache. Additionally I added to the return model a method that would reset all the associated return_questions when edit is called. [HOW DID YOU FORCE A REFRESH?]
 
-* 
+* Implementing the fat model/skinny controller convention to the project. In my readings of the Rails 4 Way and other documentation I learned about the skinny controller convention. Initially I had too much logic in the return controller, and as a result the return controller had become difficult to read. Refactoring the logic in a way that it still worked as intended as a separate methods took some thinking, but in the end I learned that I should have planned to do this from the beginning of the app.
 
 The App in Action
 -----------------
