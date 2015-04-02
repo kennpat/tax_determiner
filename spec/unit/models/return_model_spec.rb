@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe ReturnModel, type: :model do
-  
-
-end
+# describe ReturnModel, type: :model do
+#
+#
+# end
